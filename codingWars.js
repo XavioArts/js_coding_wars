@@ -151,8 +151,8 @@ const updateName = (obj, new_name) => {
     return newObj;
 }
 
-console.log(updateName(taco1, "harold"));
-console.log(taco1);
+// console.log(updateName(taco1, "harold"));
+// console.log(taco1);
 
 // Remove (delete a taco) 
 
@@ -163,7 +163,7 @@ const deleteTaco = (array, id) => {
     return newArray;
 }
 
-console.log(deleteTaco(tacos,2));
+// console.log(deleteTaco(tacos,2));
 
 // Create (add a taco) 
 
@@ -174,9 +174,19 @@ const addObj = (array, obj) => {
     return newArray;
 }
 
-console.log(addObj(tacos,taco3));
+// console.log(addObj(tacos,taco3));
 
 // bonus use reduce to return the sum of prices in tacos array
+
+const priceSum = (array) => {
+    let initialValue = 0;
+    let sum = array.reduce((prevValue,currentValue) => {
+        return prevValue + currentValue.price;
+    }, initialValue);
+    return sum;
+}
+
+console.log(priceSum(tacos));
 
 // bonus do in rails
 
