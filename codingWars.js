@@ -97,11 +97,31 @@ const findObj = (array, id) => {
 
 // return a new array with all prices greater than 19
 
+const highPrice = (array) => {
+    let newArray = array.filter((obj) => {
+        return obj.price > 19;
+    });
+    return newArray;
+}
+
+console.log(highPrice(tacos));
+
+//high price done
 
 
 // return a new array with a 'info' key where it is a combo of
 
 // name price and about
+
+const addInfo = (array) => {
+    let newArray = array.map((obj) => {
+        let info = obj.name+obj.price+obj.about;
+        return { ...obj, info: info }
+    });
+    return newArray;
+}
+
+console.log(addInfo(tacos));
 
 
 
