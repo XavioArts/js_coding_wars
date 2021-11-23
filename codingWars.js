@@ -27,8 +27,8 @@ const changeName = (array, id) => {
     return newArray;
 }
 
-console.log(taco);
-console.log(changeName(tacos, 1));
+// console.log(taco);
+// console.log(changeName(tacos, 1));
 
 
 
@@ -40,24 +40,48 @@ const formatHTML = (item) => {
     return `<div><h1>${item.name}<h1><p>${item.about}, $${item.price}.00</p></div>`;
 };
 
-console.log(formatHTML(taco1));
-console.log(formatHTML(taco2));
-console.log(formatHTML(taco));
+// console.log(formatHTML(taco1));
+// console.log(formatHTML(taco2));
+// console.log(formatHTML(taco));
 
 
 // write a function that takes an tacoOBJ and return formatted price with
 
 // .00 
 
+const formatPrice = (obj) => {
+    let newPrice = obj.price.toFixed(2);
+    let newObj = { ...obj, price: newPrice };
+    return newObj;
+}
+
+// console.log(formatPrice(taco1));
 
 
 // create a new array where all of the prices is formatted with .00
+
+const formatPriceArray = (array) => {
+    let newArray = array.map((obj) => {
+        return formatPrice(obj);
+    });
+    return newArray;
+}
+
+// console.log(formatPriceArray(tacos));
 
 
 
 // write a function that takes an array and logs each item in the array
 
 // hint forEach
+
+const logArray = (array) => {
+    array.forEach((obj) => {
+        console.log(obj);
+    })
+}
+
+logArray(tacos);// 
 
 
 
