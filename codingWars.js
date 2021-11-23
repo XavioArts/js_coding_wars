@@ -81,12 +81,18 @@ const logArray = (array) => {
     })
 }
 
-logArray(tacos);// 
+// logArray(tacos);
 
 
 
 // use the find method to return the object with id:1
 
+const findObj = (array, id) => {
+    let newObj = array.find((obj) => { return obj.id === id });
+    return newObj;
+}
+
+// console.log(findObj(tacos, 1));
 
 
 // return a new array with all prices greater than 19
