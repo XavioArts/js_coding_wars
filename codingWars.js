@@ -14,6 +14,22 @@ const tacos = [taco, taco1, taco2]
 
 // and returns a new object with name changed to "changed"
 
+const changeName = (array, id) => {
+    let newName = "changed";
+    let newArray = array.map((item) => {
+        if (item.id !== id) {
+            return item;
+        }
+        else {
+            return { ...item, name: newName };
+        }
+    });
+    return newArray;
+}
+
+console.log(taco);
+console.log(changeName(tacos, 1));
+
 
 
 // write a function that takes an tacoOBJ and return some
@@ -46,7 +62,7 @@ const tacos = [taco, taco1, taco2]
 
 
 
-// return a new array with a 'about' key where it is a combo of
+// return a new array with a 'info' key where it is a combo of
 
 // name price and about
 
