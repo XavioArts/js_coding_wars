@@ -36,6 +36,13 @@ console.log(changeName(tacos, 1));
 
 // formatted html (will be a string technically)
 
+const formatHTML = (item) => {
+    return `<div><h1>${item.name}<h1><p>${item.about}, $${item.price}.00</p></div>`;
+};
+
+console.log(formatHTML(taco1));
+console.log(formatHTML(taco2));
+console.log(formatHTML(taco));
 
 
 // write a function that takes an tacoOBJ and return formatted price with
