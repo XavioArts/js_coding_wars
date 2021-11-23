@@ -104,7 +104,7 @@ const highPrice = (array) => {
     return newArray;
 }
 
-console.log(highPrice(tacos));
+// console.log(highPrice(tacos));
 
 //high price done
 
@@ -121,7 +121,7 @@ const addInfo = (array) => {
     return newArray;
 }
 
-console.log(addInfo(tacos));
+// console.log(addInfo(tacos));
 
 
 
@@ -135,13 +135,46 @@ console.log(addInfo(tacos));
 
 // READ (array of obj to array of html) 
 
+const readArray = (array) => {
+    let newArray = array.map((obj) => {
+        return `<div><p>${obj.name}, ${obj.about} - $${obj.price}</p></div>`;
+    });
+    return newArray;
+}
+
+// console.log(readArray(tacos));
+
 // Update (update a taco) 
+
+const updateName = (obj, new_name) => {
+    let newObj = { ...obj, name: new_name };
+    return newObj;
+}
+
+console.log(updateName(taco1, "harold"));
+console.log(taco1);
 
 // Remove (delete a taco) 
 
+const deleteTaco = (array, id) => {
+    let newArray = array.filter((obj) => {
+        return obj.id !== id;
+    });
+    return newArray;
+}
+
+console.log(deleteTaco(tacos,2));
+
 // Create (add a taco) 
 
+const taco3 = {id:4, name:'meat-a-ball', price:500, about:'Its a spicy'}
 
+const addObj = (array, obj) => {
+    let newArray = [ ...array, obj ];
+    return newArray;
+}
+
+console.log(addObj(tacos,taco3));
 
 // bonus use reduce to return the sum of prices in tacos array
 
